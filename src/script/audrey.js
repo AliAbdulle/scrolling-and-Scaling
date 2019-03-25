@@ -1,4 +1,4 @@
-let audrey = document.getElementById('#audrey')
+let audrey = document.getElementById('audrey')
 
 //console.log(audrey)
 
@@ -11,13 +11,14 @@ window.addEventListener('scroll', function () {
         Adjust the width of audrey to be 1/3 the value of
         `window.scrollY`. No lower than 50px, though.
     */
-    document.getElementById('audrey').style.height = window.scrollY + '50px';
-
-    /*
-        Adjust the height of audrey to be 1/4 the value of
-        `window.scrollY`. No lower than 100px, though.
-    */
-   document.getElementById('audrey').style.width = window.scrollY + "100px";
+   audrey.style.width = window.scrollY * 0.33 + "px";
+   audrey.style.minWidth = "50px"
+   /*
+   Adjust the height of audrey to be 1/4 the value of
+   `window.scrollY`. No lower than 100px, though.
+   */
+  audrey.style.height = window.scrollY * 0.25 + "px";
+  audrey.style.minHeight = "100px";
 
    this.console.log("scroll")
 })
